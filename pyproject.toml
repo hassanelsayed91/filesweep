@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filesweep"
+version = "1.0.0"
+description = "Tidy any Windows folder by file type - preview first, undo with one command."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Hassan Elsayed", email = "acc.hassan.2012@gmail.com" }]
+keywords = ["windows", "organizer", "files", "downloads", "cli", "tkinter", "productivity"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Win32 (MS Windows)",
+  "Environment :: X11 Applications",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Topic :: Desktop Environment :: File Managers",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hassanelsayed91/filesweep"
+Issues = "https://github.com/hassanelsayed91/filesweep/issues"
+Changelog = "https://github.com/hassanelsayed91/filesweep/blob/main/CHANGELOG.md"
+
+[project.scripts]
+filesweep = "filesweep.cli:main"
+
+[tool.setuptools]
+packages = ["filesweep"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
