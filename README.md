@@ -37,6 +37,16 @@ python -m filesweep plan         # see what would happen in your Downloads folde
 
 Requires Python 3.10+ on Windows. Nothing to `pip install`.
 
+### No Python? Build the .exe
+
+```powershell
+.\build.ps1     # -> dist\FileSweep.exe (GUI) + dist\FileSweep-CLI.exe
+.\install.ps1   # copies to %LOCALAPPDATA%\Programs\FileSweep + Desktop/Start Menu shortcuts
+```
+
+Both executables are single files with the icon baked in, and `install.ps1` needs no
+administrator rights. Remove everything with `.\install.ps1 -Uninstall`.
+
 ### Command line
 
 ```powershell
@@ -138,7 +148,8 @@ python tools/screenshot.py          # rebuild the README screenshot (needs Pillo
 Build standalone `.exe` files (optional, needs PyInstaller):
 
 ```powershell
-.\build.ps1
+.\build.ps1        # dist\FileSweep.exe (GUI) + dist\FileSweep-CLI.exe
+.\install.ps1      # per-user install + shortcuts
 ```
 
 Project layout:
@@ -150,6 +161,8 @@ filesweep/
   gui.py       Tkinter desktop app
 tests/         22 unit tests
 tools/         icon + screenshot helpers (dev only)
+build.ps1      PyInstaller builds
+install.ps1    per-user install with Desktop + Start Menu shortcuts
 ```
 
 ## Contributing
@@ -183,6 +196,9 @@ python -m filesweep undo     # تراجع عن آخر عملية
 
 **أمان:** مفيش حذف خالص، مفيش استبدال لملف موجود (بيتحول لـ `اسم (1).ext`)، والـ journal
 بيتكتب قبل حركة أول ملف فتقدر ترجع كل حاجة زي ما كانت.
+
+**من غير بايثون؟** `.\build.ps1` يبني `dist\FileSweep.exe`، و`.\install.ps1` بيثبته لمستخدمك
+ويضيف Shortcut على الديسكتوب وقائمة ابدأ (بدون صلاحيات أدمن).
 
 اليوم الأول من تحدي **30 أداة ويندوز في 30 يوم** — كل أداة مستودع مستقل بترخيص MIT.
 
