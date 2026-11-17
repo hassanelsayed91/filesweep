@@ -4,6 +4,12 @@
 
 Day 1 of **30 Windows tools in 30 days** · 100% open source (MIT)
 
+[![tests](https://github.com/hassanelsayed91/filesweep/actions/workflows/ci.yml/badge.svg)](https://github.com/hassanelsayed91/filesweep/actions/workflows/ci.yml)
+![platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6)
+![python](https://img.shields.io/badge/python-3.10%2B-3776AB)
+![dependencies](https://img.shields.io/badge/dependencies-none-22c55e)
+![license](https://img.shields.io/badge/license-MIT-blue)
+
 ![FileSweep screenshot](docs/screenshot.png)
 
 ---
