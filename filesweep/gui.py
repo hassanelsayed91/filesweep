@@ -11,11 +11,9 @@ from tkinter import filedialog, messagebox, ttk
 from . import core
 from .core import Rules
 
-ACCENT = "#2563eb"
-ACCENT_DARK = "#1d4ed8"
-BACKGROUND = "#f6f7fb"
 CARD = "#ffffff"
 MUTED = "#64748b"
+BACKGROUND = "#f6f7fb"
 
 
 def _enable_dpi_awareness() -> None:
